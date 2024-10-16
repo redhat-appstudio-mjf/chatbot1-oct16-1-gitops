@@ -1,0 +1,12 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: chatbot1-oct16-1-dsp-job-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: chatbot1-oct16-1-dsp-job
+    namespace: chatbot1-oct16-1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: chatbot1-oct16-1-dsp-job-role
